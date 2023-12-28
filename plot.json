@@ -1,0 +1,1085 @@
+{
+ "geoms": {
+ "geom1_point_pred": {
+ "geom": "point",
+"classed": "geom1_point_pred",
+"aes": {
+ "x": "x1",
+"y": "x2",
+"colour": "y",
+"fill": "set.name",
+"showSelectedlegendfill": "set.name",
+"showSelectedlegendcolour": "y",
+"showSelected1": "iteration" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":        3,
+"stroke":        2,
+"shape":       21,
+"showSelected": "iteration" 
+},
+"types": {
+ "fill": "rgb",
+"colour": "character",
+"x": "numeric",
+"y": "numeric",
+"showSelectedlegendfill": "character",
+"showSelectedlegendcolour": "factor",
+"showSelected1": "integer",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [
+ "iteration" 
+],
+"nest_order": [
+ "showSelectedlegendfill",
+"showSelectedlegendcolour",
+"PANEL" 
+],
+"subset_order": [
+ "showSelectedlegendfill",
+"showSelectedlegendcolour",
+"PANEL" 
+],
+"columns": {
+ "common": [
+ "colour",
+"x",
+"y",
+"showSelectedlegendcolour",
+"PANEL",
+"group" 
+] 
+},
+"chunks": {
+ "1": 1,
+"2": 2,
+"3": 3,
+"4": 4,
+"5": 5,
+"6": 6,
+"7": 7,
+"8": 8,
+"9": 9,
+"10": 10,
+"11": 11,
+"12": 12,
+"13": 13,
+"14": 14,
+"15": 15,
+"16": 16,
+"17": 17,
+"18": 18,
+"19": 19,
+"20": 20,
+"21": 21,
+"22": 22,
+"23": 23,
+"24": 24,
+"25": 25,
+"26": 26,
+"27": 27,
+"28": 28,
+"29": 29,
+"30": 30,
+"31": 31,
+"32": 32,
+"33": 33,
+"34": 34,
+"35": 35,
+"36": 36,
+"37": 37,
+"38": 38,
+"39": 39,
+"40": 40,
+"41": 41,
+"42": 42,
+"43": 43,
+"44": 44,
+"45": 45 
+},
+"total": 45 
+},
+"geom2_path_pred": {
+ "geom": "path",
+"classed": "geom2_path_pred",
+"aes": {
+ "x": "x1",
+"y": "x2",
+"group": "paste(algorithm, iteration, contour.i)",
+"showSelected1": "iteration",
+"showSelected2": "algorithm" 
+},
+"params": {
+ "lineend": "butt",
+"linejoin": "round",
+"linemitre":        1,
+"na.rm": false,
+"na.rm": false,
+"colour": "#FF0000",
+"showSelected": [ "iteration", "algorithm" ] 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"group": "character",
+"showSelected1": "integer",
+"showSelected2": "character",
+"PANEL": "factor" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2",
+"PANEL",
+"group" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2",
+"PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom3_line_err": {
+ "geom": "line",
+"classed": "geom3_line_err",
+"aes": {
+ "x": "train_size",
+"y": "classif.ce",
+"group": "paste(algorithm, seed)",
+"colour": "algorithm",
+"showSelectedlegendcolour": "algorithm",
+"clickSelects": "seed" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":        4,
+"clickSelects": "seed",
+"alpha_off":      0.2,
+"showSelected": [ ] 
+},
+"types": {
+ "colour": "rgb",
+"y": "numeric",
+"x": "numeric",
+"group": "character",
+"showSelectedlegendcolour": "character",
+"clickSelects": "integer",
+"PANEL": "factor" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelectedlegendcolour",
+"PANEL",
+"group" 
+],
+"subset_order": [
+ "showSelectedlegendcolour",
+"PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom4_point_err": {
+ "geom": "point",
+"classed": "geom4_point_err",
+"aes": {
+ "x": "train_size",
+"y": "classif.ce",
+"colour": "algorithm",
+"showSelectedlegendcolour": "algorithm",
+"clickSelects": "iteration",
+"showSelected1": "seed" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":        5,
+"stroke":        3,
+"fill": "#000000",
+"fill_off": "transparent",
+"showSelected": "seed",
+"clickSelects": "iteration" 
+},
+"types": {
+ "colour": "rgb",
+"y": "numeric",
+"x": "numeric",
+"showSelectedlegendcolour": "character",
+"clickSelects": "integer",
+"showSelected1": "integer",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelectedlegendcolour",
+"showSelected1",
+"PANEL" 
+],
+"subset_order": [
+ "showSelectedlegendcolour",
+"showSelected1",
+"PANEL" 
+],
+"chunks": 1,
+"total": 1 
+} 
+},
+"selectors": {
+ "set.name": {
+ "type": "multiple",
+"legend": true,
+"is.variable.value": false,
+"showSelected": true,
+"selected": [ "unused", "test", "train" ],
+"levels": [ "unused", "test", "train" ],
+"update": [
+ "geom1_point_pred" 
+] 
+},
+"y": {
+ "type": "multiple",
+"legend": true,
+"is.variable.value": false,
+"showSelected": true,
+"selected": [ "spam", "not" ],
+"levels": [ "spam", "not" ],
+"update": [
+ "geom1_point_pred" 
+] 
+},
+"algorithm": {
+ "type": "multiple",
+"legend": true,
+"is.variable.value": false,
+"showSelected": true,
+"selected": [ "rpart", "featureless" ],
+"levels": [ "rpart", "featureless" ],
+"update": [
+ "geom2_path_pred",
+"geom3_line_err",
+"geom4_point_err" 
+] 
+},
+"iteration": {
+ "is.variable.value": false,
+"type": "single",
+"showSelected": true,
+"chunks": "iteration",
+"clickSelects": true,
+"selected": "1",
+"levels": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45" ],
+"update": [
+ "geom1_point_pred",
+"geom2_path_pred",
+"geom4_point_err" 
+] 
+},
+"seed": {
+ "is.variable.value": false,
+"type": "single",
+"clickSelects": true,
+"showSelected": true,
+"selected": "1",
+"levels": [ "1", "2", "3" ],
+"update": [
+ "geom3_line_err",
+"geom4_point_err" 
+] 
+} 
+},
+"plots": {
+ "pred": {
+ "panel_margin_lines":        1,
+"legend": {
+ "set.name": {
+ "guide": "legend",
+"geoms": "point",
+"title": "set.name",
+"class": "set.name",
+"selector": "set.name",
+"is_discrete": true,
+"legend_type": "fill",
+"text_size": "8.8pt",
+"title_size": "11pt",
+"entries": [
+ {
+ "pointfill": "#D95F02",
+"pointshape":       21,
+"pointcolour": "#000000",
+"pointsize":        3,
+"pointstroke":        2,
+"label": "test" 
+},
+{
+ "pointfill": "#1B9E77",
+"pointshape":       21,
+"pointcolour": "#000000",
+"pointsize":        3,
+"pointstroke":        2,
+"label": "train" 
+},
+{
+ "pointfill": "#FFFFFF",
+"pointshape":       21,
+"pointcolour": "#000000",
+"pointsize":        3,
+"pointstroke":        2,
+"label": "unused" 
+} 
+] 
+},
+"y": {
+ "guide": "legend",
+"geoms": "point",
+"title": "y",
+"class": "y",
+"selector": "y",
+"is_discrete": true,
+"legend_type": "colour",
+"text_size": "8.8pt",
+"title_size": "11pt",
+"entries": [
+ {
+ "pointcolour": "transparent",
+"pointshape":       21,
+"pointsize":        3,
+"pointstroke":        2,
+"label": "not",
+"pointfill": "#FFFFFF" 
+},
+{
+ "pointcolour": "#000000",
+"pointshape":       21,
+"pointsize":        3,
+"pointstroke":        2,
+"label": "spam",
+"pointfill": "#FFFFFF" 
+} 
+] 
+} 
+},
+"strips": {
+ "right": [
+ "",
+"" 
+],
+"top": [
+ "task_id: constant",
+"task_id: xor" 
+],
+"n": {
+ "top":        1,
+"right":        1 
+} 
+},
+"layout": {
+ "PANEL": [ "1", "2" ],
+"ROW": [ 1, 1 ],
+"COL": [ 1, 2 ],
+"task_id": [ "constant", "xor" ],
+"SCALE_X": [ 1, 2 ],
+"SCALE_Y": [ 1, 1 ],
+"AXIS_Y": [ true, false ],
+"AXIS_X": [ true, true ],
+"coord_fixed": [ true, true ],
+"width_proportion": [      0.5,      0.5 ],
+"height_proportion": [        1,        1 ] 
+},
+"panel_background": {
+ "fill": "#EBEBEB",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": [],
+"grid_major": {
+ "colour": "#FFFFFF",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -1,
+    -0.5,
+       0,
+     0.5,
+       1 
+],
+[
+       -1,
+    -0.5,
+       0,
+     0.5,
+       1 
+] 
+],
+"y": [
+ [
+       -1,
+    -0.5,
+       0,
+     0.5,
+       1 
+],
+[
+       -1,
+    -0.5,
+       0,
+     0.5,
+       1 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FFFFFF",
+"size":     0.25,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -1,
+   -0.75,
+    -0.5,
+   -0.25,
+       0,
+    0.25,
+     0.5,
+    0.75,
+       1 
+],
+[
+       -1,
+   -0.75,
+    -0.5,
+   -0.25,
+       0,
+    0.25,
+     0.5,
+    0.75,
+       1 
+] 
+],
+"y": [
+ [
+       -1,
+   -0.75,
+    -0.5,
+   -0.25,
+       0,
+    0.25,
+     0.5,
+    0.75,
+       1 
+],
+[
+       -1,
+   -0.75,
+    -0.5,
+   -0.25,
+       0,
+    0.25,
+     0.5,
+    0.75,
+       1 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+       -1,
+    -0.5,
+       0,
+     0.5,
+       1 
+],
+"xlab": [
+ "-1.0",
+"-0.5",
+"0.0",
+"0.5",
+"1.0" 
+],
+"xrange": [     -1.1,      1.1 ],
+"xline": true,
+"xticks": true,
+"y": [
+       -1,
+    -0.5,
+       0,
+     0.5,
+       1 
+],
+"ylab": [
+ "-1.0",
+"-0.5",
+"0.0",
+"0.5",
+"1.0" 
+],
+"yrange": [     -1.1,      1.1 ],
+"yline": true,
+"yticks": true 
+},
+"axis2": {
+ "x": [
+       -1,
+    -0.5,
+       0,
+     0.5,
+       1 
+],
+"xlab": [
+ "-1.0",
+"-0.5",
+"0.0",
+"0.5",
+"1.0" 
+],
+"xrange": [     -1.1,      1.1 ],
+"xline": true,
+"xticks": true,
+"y": [
+       -1,
+    -0.5,
+       0,
+     0.5,
+       1 
+],
+"ylab": [
+ "-1.0",
+"-0.5",
+"0.0",
+"0.5",
+"1.0" 
+],
+"yrange": [     -1.1,      1.1 ],
+"yline": true,
+"yticks": true 
+},
+"xtitle": "x1",
+"strip_text_xsize": "11pt",
+"xsize": "11pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "x2",
+"strip_text_ysize": "11pt",
+"ysize": "11pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "-1.0",
+"-0.5",
+"0.0",
+"0.5",
+"1.0" 
+],
+"ylabs": [
+ "-1.0",
+"-0.5",
+"0.0",
+"0.5",
+"1.0" 
+],
+"title": "Predictions for selected train/test split",
+"title_size": "13.2pt",
+"options": {
+ "width":      600,
+"height":      400 
+},
+"geoms": [
+ "geom1_point_pred",
+"geom2_path_pred" 
+] 
+},
+"err": {
+ "panel_margin_lines":        1,
+"legend": {
+ "algorithm": {
+ "guide": "legend",
+"geoms": [ "path", "point" ],
+"title": "algorithm",
+"class": "algorithm",
+"selector": "algorithm",
+"is_discrete": true,
+"legend_type": "colour",
+"text_size": "8.8pt",
+"title_size": "11pt",
+"entries": [
+ {
+ "pathcolour": "#0000FF",
+"pathsize":        4,
+"pathlinetype":        1,
+"label": "featureless",
+"pointcolour": "#0000FF",
+"pointshape":       19,
+"pointsize":        5,
+"pointfill": "#000000",
+"pointstroke":        3 
+},
+{
+ "pathcolour": "#FF0000",
+"pathsize":        4,
+"pathlinetype":        1,
+"label": "rpart",
+"pointcolour": "#FF0000",
+"pointshape":       19,
+"pointsize":        5,
+"pointfill": "#000000",
+"pointstroke":        3 
+} 
+] 
+} 
+},
+"strips": {
+ "right": [
+ "",
+"test.fold: 1",
+"",
+"test.fold: 2",
+"",
+"test.fold: 3" 
+],
+"top": [
+ "task_id: constant",
+"task_id: xor",
+"",
+"",
+"",
+"" 
+],
+"n": {
+ "top":        1,
+"right":        1 
+} 
+},
+"layout": {
+ "PANEL": [ "1", "2", "3", "4", "5", "6" ],
+"ROW": [ 1, 1, 2, 2, 3, 3 ],
+"COL": [ 1, 2, 1, 2, 1, 2 ],
+"test.fold": [ 1, 1, 2, 2, 3, 3 ],
+"task_id": [ "constant", "xor", "constant", "xor", "constant", "xor" ],
+"SCALE_X": [ 1, 2, 1, 2, 1, 2 ],
+"SCALE_Y": [ 1, 1, 2, 2, 3, 3 ],
+"AXIS_Y": [ true, false, true, false, true, false ],
+"AXIS_X": [ false, false, false, false, true, true ],
+"coord_fixed": [ false, false, false, false, false, false ],
+"width_proportion": [      0.5,      0.5,      0.5,      0.5,      0.5,      0.5 ],
+"height_proportion": [ 0.3333333, 0.3333333, 0.3333333, 0.3333333, 0.3333333, 0.3333333 ] 
+},
+"panel_background": {
+ "fill": "#EBEBEB",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": [],
+"grid_major": {
+ "colour": "#FFFFFF",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        1,
+1.477121,
+       2 
+],
+[
+        1,
+1.477121,
+       2 
+],
+[
+        1,
+1.477121,
+       2 
+],
+[
+        1,
+1.477121,
+       2 
+],
+[
+        1,
+1.477121,
+       2 
+],
+[
+        1,
+1.477121,
+       2 
+] 
+],
+"y": [
+ [
+      0.3,
+     0.4,
+     0.5 
+],
+[
+      0.3,
+     0.4,
+     0.5 
+],
+[
+      0.3,
+     0.4,
+     0.5 
+],
+[
+      0.3,
+     0.4,
+     0.5 
+],
+[
+      0.2,
+     0.3,
+     0.4,
+     0.5 
+],
+[
+      0.2,
+     0.3,
+     0.4,
+     0.5 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FFFFFF",
+"size":     0.25,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        1,
+1.238561,
+1.477121,
+1.738561,
+       2,
+2.238561 
+],
+[
+        1,
+1.238561,
+1.477121,
+1.738561,
+       2,
+2.238561 
+],
+[
+        1,
+1.238561,
+1.477121,
+1.738561,
+       2,
+2.238561 
+],
+[
+        1,
+1.238561,
+1.477121,
+1.738561,
+       2,
+2.238561 
+],
+[
+        1,
+1.238561,
+1.477121,
+1.738561,
+       2,
+2.238561 
+],
+[
+        1,
+1.238561,
+1.477121,
+1.738561,
+       2,
+2.238561 
+] 
+],
+"y": [
+ [
+     0.25,
+     0.3,
+    0.35,
+     0.4,
+    0.45,
+     0.5,
+    0.55 
+],
+[
+     0.25,
+     0.3,
+    0.35,
+     0.4,
+    0.45,
+     0.5,
+    0.55 
+],
+[
+     0.25,
+     0.3,
+    0.35,
+     0.4,
+    0.45,
+     0.5,
+    0.55 
+],
+[
+     0.25,
+     0.3,
+    0.35,
+     0.4,
+    0.45,
+     0.5,
+    0.55 
+],
+[
+      0.2,
+    0.25,
+     0.3,
+    0.35,
+     0.4,
+    0.45,
+     0.5,
+    0.55 
+],
+[
+      0.2,
+    0.25,
+     0.3,
+    0.35,
+     0.4,
+    0.45,
+     0.5,
+    0.55 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+        1,
+1.477121,
+       2 
+],
+"xlab": [
+ "10",
+"30",
+"100" 
+],
+"xrange": [ 0.9348402, 2.368356 ],
+"xline": true,
+"xticks": true,
+"y": [
+      0.3,
+     0.4,
+     0.5 
+],
+"ylab": [
+ "0.3",
+"0.4",
+"0.5" 
+],
+"yrange": [ 0.2420792, 0.579703 ],
+"yline": true,
+"yticks": true 
+},
+"axis2": {
+ "x": [
+        1,
+1.477121,
+       2 
+],
+"xlab": [
+ "10",
+"30",
+"100" 
+],
+"xrange": [ 0.9348402, 2.368356 ],
+"xline": true,
+"xticks": true,
+"y": [
+      0.3,
+     0.4,
+     0.5 
+],
+"ylab": [
+ "0.3",
+"0.4",
+"0.5" 
+],
+"yrange": [ 0.2420792, 0.579703 ],
+"yline": true,
+"yticks": true 
+},
+"axis3": {
+ "x": [
+        1,
+1.477121,
+       2 
+],
+"xlab": [
+ "10",
+"30",
+"100" 
+],
+"xrange": [ 0.9348402, 2.368356 ],
+"xline": true,
+"xticks": true,
+"y": [
+      0.3,
+     0.4,
+     0.5 
+],
+"ylab": [
+ "0.3",
+"0.4",
+"0.5" 
+],
+"yrange": [    0.204,    0.556 ],
+"yline": true,
+"yticks": true 
+},
+"axis4": {
+ "x": [
+        1,
+1.477121,
+       2 
+],
+"xlab": [
+ "10",
+"30",
+"100" 
+],
+"xrange": [ 0.9348402, 2.368356 ],
+"xline": true,
+"xticks": true,
+"y": [
+      0.3,
+     0.4,
+     0.5 
+],
+"ylab": [
+ "0.3",
+"0.4",
+"0.5" 
+],
+"yrange": [    0.204,    0.556 ],
+"yline": true,
+"yticks": true 
+},
+"axis5": {
+ "x": [
+        1,
+1.477121,
+       2 
+],
+"xlab": [
+ "10",
+"30",
+"100" 
+],
+"xrange": [ 0.9348402, 2.368356 ],
+"xline": true,
+"xticks": true,
+"y": [
+      0.2,
+     0.3,
+     0.4,
+     0.5 
+],
+"ylab": [
+ "0.2",
+"0.3",
+"0.4",
+"0.5" 
+],
+"yrange": [ 0.1737374, 0.5737374 ],
+"yline": true,
+"yticks": true 
+},
+"axis6": {
+ "x": [
+        1,
+1.477121,
+       2 
+],
+"xlab": [
+ "10",
+"30",
+"100" 
+],
+"xrange": [ 0.9348402, 2.368356 ],
+"xline": true,
+"xticks": true,
+"y": [
+      0.2,
+     0.3,
+     0.4,
+     0.5 
+],
+"ylab": [
+ "0.2",
+"0.3",
+"0.4",
+"0.5" 
+],
+"yrange": [ 0.1737374, 0.5737374 ],
+"yline": true,
+"yticks": true 
+},
+"xtitle": "Train set size",
+"strip_text_xsize": "11pt",
+"xsize": "11pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "Classification error on test set",
+"strip_text_ysize": "11pt",
+"ysize": "11pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "10",
+"30",
+"100" 
+],
+"ylabs": [
+ "0.3",
+"0.4",
+"0.5",
+"0.2" 
+],
+"title": "Test error for each split",
+"title_size": "13.2pt",
+"options": {
+ "width":      400,
+"height":      400 
+},
+"geoms": [
+ "geom3_line_err",
+"geom4_point_err" 
+] 
+} 
+},
+"title": "Variable size train sets, classification",
+"source": "https://github.com/tdhock/mlr3resampling/blob/main/vignettes/ResamplingVariableSizeTrainCV.Rmd" 
+}
